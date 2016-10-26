@@ -12,10 +12,8 @@ link.addEventListener("click", function(event) {
 	if (storage) {
 		login.value = storage;
 		password.focus();
-		console.log("пароль фокус");
 	} else {
 		login.focus();
-		console.log("логин фокус");
 	}
 });
 
