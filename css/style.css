@@ -35,7 +35,7 @@ input::-webkit-input-placeholder {
 	opacity: 1;
 }
 
-.clearfix:after { /* Псевдораспорка */
+.clearfix::after { /* Псевдораспорка */
 	content: "";
 	display: table;
 	clear: both;
@@ -48,12 +48,6 @@ input::-webkit-input-placeholder {
 .main-navigation {
 	float: left;
 	width: 780px;
-}
-.user-block {
-	position: relative;
-	float: right;
-	max-width: 140px;
-	font-size: 0;
 }
 .main-navigation ul {
 	margin: 0;
@@ -85,7 +79,7 @@ input::-webkit-input-placeholder {
 	background: #242424;
 	z-index: 1;
 }
-.main-navigation .active a:after {
+.main-navigation .active a::after {
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -96,6 +90,13 @@ input::-webkit-input-placeholder {
 }
 .main-navigation .active a:hover {
 	background: none;
+}
+
+.user-block {
+	position: relative;
+	float: right;
+	max-width: 140px;
+	font-size: 0;
 }
 .user-block a {
 	position: relative;
@@ -110,7 +111,7 @@ input::-webkit-input-placeholder {
 	color: white;
 }
 
-.user-block:before {
+.user-block a::before {
 	content:"";
 	position: absolute;
 	width: 17px;
@@ -121,17 +122,8 @@ input::-webkit-input-placeholder {
 	background-position: -51px -50px;
 	opacity: 1;
 }
-.user-block:hover:before {
-	content:"";
-	position: absolute;
-	width: 17px;
-	height: 17px;
-	top: 28px;
-	left: 20px;
-	background-image: url("../img/sprite/sprite.png");
-	background-position: -51px -50px;
-	opacity: 0.3;
-	z-index: 2;
+.user-block a:hover::before {
+	opacity: .3;
 }
 								/*MODAL*/
 .modal {
@@ -155,15 +147,12 @@ input::-webkit-input-placeholder {
 	display: block;
 	animation: bounce 0.6s;
 }
-
 .modal-error {
 	animation: shake 0.6s;
 }
-
-/*.overlay {
+/* .overlay {
 	overflow: hidden;
 }
-
 .overlay::after {
 	content: "";
 	display: block;
@@ -172,10 +161,9 @@ input::-webkit-input-placeholder {
 	height: 100%;
 	top: 0;
 	left: 0;
-	z-index: 90;
+	z-index: 5;
 	background-color: rgba(0,0,0,.3);
-	
-}*/
+} */
 .modal-close {
 	content: "";
 	display: block;

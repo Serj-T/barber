@@ -1,3 +1,8 @@
+
+if ("localStorage" in window && window["localStorage"] != null) {
+    // Local storage supported
+}
+
 var link = document.querySelector(".login");
 var popup = document.querySelector(".modal");
 var close = document.querySelector(".modal-close")
@@ -5,6 +10,7 @@ var login = popup.querySelector("[name=user-login]");
 var password = popup.querySelector("[name=user-pass]");
 var form = popup.querySelector("form");
 var storage = localStorage.getItem("login");
+
 
 link.addEventListener("click", function(event) {
 	event.preventDefault();
@@ -22,7 +28,6 @@ close.addEventListener("click", function(event) {
 	popup.classList.remove("modal-on");
 	popup.classList.remove("modal-error");
 });
-
 
 form.addEventListener("submit", function(event) {
 	if (!login.value || !password.value) {
