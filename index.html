@@ -137,11 +137,11 @@
 						Укажите желаемую дату и время и мы свяжемся
 						с вами для подтверждения брони.
 					</p>
-					<form action="/echo" method="post">
-						<input name="date" type="date">
-						<input name="time" type="time">
-						<input name="name" type="text" placeholder="Ваше имя">
-						<input name="tel" type="text"  placeholder="Телефон">
+					<form action="https://echo.htmlacademy.ru" method="post">
+						<input name="date" type="text" placeholder="Дата" required>
+						<input name="time" type="text" placeholder="Время" required>
+						<input name="name" type="text" placeholder="Ваше имя" required>
+						<input name="tel" type="text"  placeholder="Телефон" required>
 						<button type="submit" class="btn">Отправить</button>
 					</form>
 				</div>

@@ -1,26 +1,21 @@
-
-if ("localStorage" in window && window["localStorage"] != null) {
-    // Local storage supported
-}
-
 var link = document.querySelector(".login");
 var popup = document.querySelector(".modal");
 var close = document.querySelector(".modal-close")
 var login = popup.querySelector("[name=user-login]");
 var password = popup.querySelector("[name=user-pass]");
 var form = popup.querySelector("form");
-var storage = localStorage.getItem("login");
+/*var storage = localStorage.getItem("login");*/
 
 
 link.addEventListener("click", function(event) {
 	event.preventDefault();
 	popup.classList.add("modal-on");
-	if (storage) {
+/*	if (storage) {
 		login.value = storage;
 		password.focus();
 	} else {
 		login.focus();
-	}
+	}*/
 });
 
 close.addEventListener("click", function(event) {
@@ -35,9 +30,9 @@ form.addEventListener("submit", function(event) {
 		popup.classList.remove("modal-error");
 		popup.offsetWidth = popup.offsetWidth;
 		popup.classList.add("modal-error");
-	} else {
+	}/* else {
 		localStorage.setItem("login", login.value);
-	}
+	}*/
 });
 
 window.addEventListener("keydown", function(event) {

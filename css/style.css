@@ -30,11 +30,26 @@ h3 {
 	margin: 0 auto;
 	padding: 0 10px;
 }
-input::-webkit-input-placeholder {
-	color: black;
+input::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+    color: black;
 	opacity: 1;
 }
-
+input::-moz-placeholder {  /* Firefox */
+    color: black;
+	opacity: 1;
+}
+input:-ms-input-placeholder { /* IE10–11 */
+    color: black;
+	opacity: 1;
+}
+input::-ms-input-placeholder { /* Edge */
+    color: black;
+	opacity: 1;
+}
+input::placeholder { /* CSS Working Draft */
+   	color: black;
+	opacity: 1;
+}
 .clearfix::after { /* Псевдораспорка */
 	content: "";
 	display: table;
@@ -195,6 +210,7 @@ input::-webkit-input-placeholder {
 	padding: 7px 13px;
 	border: 2px solid black;
 	font-size: 14px;
+	line-height: 18px;
 	text-transform: uppercase;
 	outline: none;
 	background: #f9f6f3;
@@ -240,7 +256,7 @@ input::-webkit-input-placeholder {
 .user-field label {
 	display: block;
 	position: absolute;
-	top: 12px;
+	top: 10px;
 	right: 13px;
 	width: 20px;
 	height: 20px;
@@ -370,7 +386,7 @@ input::-webkit-input-placeholder {
 	font-size: 14px;
   	font-family: "PT Sans Narrow", sans-serif;
   	font-weight: 700;
-  	line-height: 24px;
+  	line-height: 14px;
   	text-transform: uppercase;
 
 	background: #f9f6f3;
