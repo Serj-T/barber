@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<style type="text/css">.main-footer {margin-top: 50px;}</style>
 </head>
-<body class="inner-page">
+<body>
 
 	<header class="main-header">
 		<div class="container clearfix">
@@ -19,8 +19,8 @@
 					<li><a href="index.html"><img src="img/logo-header.png" width="111"	height="24" alt="Главная"></a></li>
 					<li><a href="#">Информация</a></li>
 					<li><a href="#">Новости</a></li>
-					<li class="active"><a href="">Прайс-лист</a></li>
-					<li><a href="shop.html">Магазин</a></li>
+					<li><a href="price.html">Прайс-лист</a></li>
+					<li class="active"><a href="">Магазин</a></li>
 					<li><a href="index.html#contacts">Контакты</a></li>
 				</ul>		  
 			</nav>
@@ -31,16 +31,26 @@
 	</header>
 
 	<div class="container">
-		<div class="modal">
+		<div class="title-card">
+			<h1 class="page-title">Войти в личный кабинет</h1>
+			<div class="breadcrumbs">
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li class="active">Вход</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="modal modal-nojs">
 			<h3 class="modal-title">Личный кабинет</h3>
 			<span class="modal-text">Ведите пожалуйста свой логин и пароль</span>
 			<form action="https://echo.htmlacademy.ru" method="post">
 				<div class="user-field"> 
-					<input id="user-login" type="text" name="user-login" placeholder="Логин">
+					<input id="user-login" type="text" name="user-login" placeholder="Логин" required>
 					<label for="user-login" class="sprite sprite-form-user"></label>
 				</div>
 				<div class="user-field"> 
-					<input id="user-pass" type="password" name="user-pass" placeholder="Пароль">
+					<input id="user-pass" type="password" name="user-pass" placeholder="Пароль" required>
 					<label for="user-pass" class="sprite sprite-form-pass"></label>
 				</div>
 				<input id="remember-check" type="checkbox" name="remember-check" checked hidden>
@@ -48,62 +58,7 @@
 				<a href="#" class="modal-forget">Я забыл пароль!</a>
 				<button type="submit" class="btn">Войти</button>
 			</form>
-			<button class="modal-close">Закрыть</button>
 		</div>
-	</div>
-
-	<div class="container clearfix">
-	
-		<div class="title-card">
-			<h1 class="page-title">Прайс-лист</h1>
-			<div class="breadcrumbs">
-				<ul>
-					<li><a href="index.html">Главная</a></li>
-					<li class="active">Прайс-лист</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="art-title">
-			<h2>Истинно мужская классика</h2>
-		</div>
-		<div class="price-column-left">
-			<h3 class="content-column-title">Мы используем только<br> лучшие средства:</h3>
-			<ul class="custom-list">
-				<li>Baxter of California</li>
-				<li>Mr Natty</li>
-				<li>Suavecito</li>
-				<li>Malin+Goetz</li>
-			</ul>
-		</div>
-
-		<div class="price-column-right">		
-			<table class="table-price">
-				<caption><h3 class="content-column-title">
-				Цены на услуги<br> наших мастеров</h3></caption>
-				<tr>
-					<td>Стрижка</td>
-					<td>1500 р.</td>
-				</tr>
-				<tr>
-					<td>Стрижка бороды</td>
-					<td>500 р.</td>
-				</tr>
-				<tr>
-					<td>Накрутка усов</td>
-					<td>350 р.</td>
-				</tr>
-			</table>
-		</div>
-			<h3 class="content-column-title">Несколько слов о нас:</h3>
-
-			<div class="price-column-left">
-				<p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас-это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
-			</div>
-			
-			<div class="price-column-right">
-				<p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденные перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
-			</div>
 	</div>
 
 	<footer class="main-footer">
@@ -124,6 +79,5 @@
 			</div>
 		</div>
 	</footer>
-	<script src="js/login.js"></script> 
 </body>
 </html>

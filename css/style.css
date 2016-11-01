@@ -241,7 +241,18 @@ input::placeholder { /* CSS Working Draft */
 	display: block;
 	animation: bounce 0.6s;
 }
-
+									/*modal-nojs*/
+.modal-nojs {
+	display: block;
+	position: static;
+	margin: 0 auto;
+}
+.modal-map-nojs {
+	display: block;
+	position: static;
+	margin: 0 auto;
+	border: 8px solid white;
+}							
 .user-field {
 	width: 100%;
 	position: relative;
@@ -271,7 +282,6 @@ input::placeholder { /* CSS Working Draft */
 	10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
 	20%, 40%, 60%, 80% { transform: translateX(10px); }
 }
-
 							/* LOGO */
 .logo {
 	padding-top: 20px;
@@ -669,9 +679,6 @@ input:focus {
 	list-style: none;
 	padding: 0;
 }
-
-
-
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   	position: relative;
@@ -716,7 +723,6 @@ input[type="checkbox"]:disabled:checked + label:before {
 	background: url("../img/sprite/sprite.png") no-repeat;
 	background-position: -52px -12px;
 }
-
 input[type="radio"] + label:before {
 	content: "";
 	position: absolute;
@@ -773,7 +779,6 @@ input[type="radio"]:disabled:checked + label:after {
 	min-width: 112px;
 	font-size: 13px;
 }
-
 .shop-items {
 	float: right;
 	width: 700px;
