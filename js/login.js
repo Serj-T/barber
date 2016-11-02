@@ -4,12 +4,15 @@ var close = document.querySelector(".modal-close")
 var login = popup.querySelector("[name=user-login]");
 var password = popup.querySelector("[name=user-pass]");
 var form = popup.querySelector("form");
+var overlay = document.querySelector(".modal-overlay");
+var overlayOn = document.querySelector(".overlay-on");
 /*var storage = localStorage.getItem("login");*/
 
 
 link.addEventListener("click", function(event) {
 	event.preventDefault();
 	popup.classList.add("modal-on");
+	overlay.classList.add("overlay-on");
 /*	if (storage) {
 		login.value = storage;
 		password.focus();
@@ -22,8 +25,16 @@ close.addEventListener("click", function(event) {
 	event.preventDefault();
 	popup.classList.remove("modal-on");
 	popup.classList.remove("modal-error");
+	overlay.classList.remove("overlay-on");
 });
 
+/*overlayOn.addEventListener("click", function(event) {
+	event.preventDefault();
+	popup.classList.remove("modal-on");
+	popup.classList.remove("modal-error");
+	overlay.classList.remove("overlay-on");
+});
+*/
 form.addEventListener("submit", function(event) {
 	if (!login.value || !password.value) {
 		event.preventDefault();
@@ -41,6 +52,7 @@ window.addEventListener("keydown", function(event) {
 		if (event.keyCode === 27) {
 			popup.classList.remove("modal-on");
 			popup.classList.remove("modal-error");
+			overlay.classList.remove("overlay-on");
 		}
 	}
 });

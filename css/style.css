@@ -7,6 +7,9 @@ body {
 	font-weight: 700;
 	font-family: "PT Sans Narrow", "Arial", sans-serif;
 	text-transform: uppercase;
+	background: #070707 url("../img/bg.jpg") no-repeat top;
+}
+.inner-page {
 	color: black;
 	background: #f8f5f2 url("../img/bg-index-content.png");
 }
@@ -167,18 +170,22 @@ input::placeholder { /* CSS Working Draft */
 }
 /* .overlay {
 	overflow: hidden;
-}
-.overlay::after {
-	content: "";
-	display: block;
-	position: absolute;
+}*/
+.modal-overlay {
+	display: none;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
 	z-index: 5;
-	background-color: rgba(0,0,0,.3);
-} */
+	background-color: rgba(0,0,0,.7);
+}
+.overlay-on {
+	display: block;
+}
+
+
 .modal-close {
 	content: "";
 	display: block;
@@ -453,6 +460,9 @@ input:focus {
 	right: 0;
 }
 						/* FOOTER */
+.inner-page .main-footer {
+	margin-top: 50px;
+}
 .main-footer {
 	padding-top: 58px;
 	padding-bottom: 40px;
@@ -570,7 +580,7 @@ input:focus {
 	width: 8px;
 	height: 8px;
 	background: black;
-	right: 0;
+	right: -5px;
 	top: 8px;
 	transform: rotate(45deg);	
 }
@@ -841,10 +851,6 @@ input[type="radio"]:disabled:checked + label:after {
 	line-height: 18px;
 }
 /*                       PRICE.HTML                   */
-.inner-page .breadcrumbs ul{
-	margin-bottom: 40px;
-}
-
 .art-title {
 	text-align: center;
 	margin-bottom: 60px;
