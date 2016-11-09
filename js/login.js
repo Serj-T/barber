@@ -4,10 +4,8 @@ var close = document.querySelector(".modal-close")
 var login = popup.querySelector("[name=user-login]");
 var password = popup.querySelector("[name=user-pass]");
 var form = popup.querySelector("form");
-var overlay = document.querySelector(".modal-overlay");
-var overlayOn = document.querySelector(".overlay-on");
+var overlay = document.querySelector(".overlay");
 /*var storage = localStorage.getItem("login");*/
-
 
 link.addEventListener("click", function(event) {
 	event.preventDefault();
@@ -28,13 +26,13 @@ close.addEventListener("click", function(event) {
 	overlay.classList.remove("overlay-on");
 });
 
-/*overlayOn.addEventListener("click", function(event) {
+overlay.addEventListener("click", function(event) {
 	event.preventDefault();
 	popup.classList.remove("modal-on");
 	popup.classList.remove("modal-error");
 	overlay.classList.remove("overlay-on");
 });
-*/
+
 form.addEventListener("submit", function(event) {
 	if (!login.value || !password.value) {
 		event.preventDefault();
@@ -48,7 +46,6 @@ form.addEventListener("submit", function(event) {
 
 window.addEventListener("keydown", function(event) {
 	if (popup.classList.contains("modal-on")) {
-		console.log("Нет класса");
 		if (event.keyCode === 27) {
 			popup.classList.remove("modal-on");
 			popup.classList.remove("modal-error");

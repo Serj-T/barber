@@ -168,10 +168,7 @@ input::placeholder { /* CSS Working Draft */
 .modal-error {
 	animation: shake 0.6s;
 }
-/* .overlay {
-	overflow: hidden;
-}*/
-.modal-overlay {
+.overlay {
 	display: none;
 	position: fixed;
 	width: 100%;
@@ -184,8 +181,6 @@ input::placeholder { /* CSS Working Draft */
 .overlay-on {
 	display: block;
 }
-
-
 .modal-close {
 	content: "";
 	display: block;
@@ -234,7 +229,7 @@ input::placeholder { /* CSS Working Draft */
 
 .modal-map {
 	display: none;
-	box-sizing: border-box;	
+	box-sizing: border-box;
 	position: fixed;
 	top: 90px;
 	margin-left: 80px;
@@ -259,7 +254,7 @@ input::placeholder { /* CSS Working Draft */
 	position: static;
 	margin: 0 auto;
 	border: 8px solid white;
-}							
+}
 .user-field {
 	width: 100%;
 	position: relative;
@@ -292,7 +287,7 @@ input::placeholder { /* CSS Working Draft */
 							/* LOGO */
 .logo {
 	padding-top: 20px;
-	width: 368px; 
+	width: 368px;
 	height: 204px;
 	margin: 0 auto;
 	margin-bottom: 21px;
@@ -323,7 +318,7 @@ input::placeholder { /* CSS Working Draft */
 	margin-bottom: 25px;
 }
 .features-item p {
-	margin: 10px; 
+	margin: 10px;
 }
 .features-title:after {
 	content: "";
@@ -333,7 +328,7 @@ input::placeholder { /* CSS Working Draft */
 	background: white;
 	left: 140px;
 	bottom: 4px;
-	transform: rotate(45deg);	
+	transform: rotate(45deg);
 }
 								/* INDEX ROW#1 */
 .index-content {
@@ -543,7 +538,7 @@ input:focus {
 					/* ITEM.html */
 .title-card	{
 	padding-top: 9px;
-}				
+}
 .page-title {
 	margin: 0;
 	margin-bottom: 16px;
@@ -582,7 +577,7 @@ input:focus {
 	background: black;
 	right: -5px;
 	top: 8px;
-	transform: rotate(45deg);	
+	transform: rotate(45deg);
 }
 .breadcrumbs li:last-child:after {
 	display: none;
@@ -663,20 +658,20 @@ input:focus {
 	top: 8px;
 	width: 7px;
 	height: 7px;
-	transform: rotate(45deg);		
+	transform: rotate(45deg);
 	background-color: black;
 }
 						/* SHOP */
 .shop-filters {
 	float: left;
 	width: 220px;
-}		
+}
 .filter-brand {
 	margin-bottom: 38px;
-}		
+}
 .filter-type {
 	margin-bottom: 34px;
-}	
+}
 .filter-brand fieldset,
 .filter-type fieldset {
 	border: none;
